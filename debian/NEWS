@@ -1,0 +1,16 @@
+libauthen-radius-perl (0.12-1) unstable; urgency=low
+
+  upstream now provides a set of radius dictionaries so that you can use
+  this module without having to install extra components of the RADIUS
+  server onto your client machine.
+
+  They are not installed into the standard location as in many
+  situations they are not required. If they were installed this package
+  would conflict with radiusd-cistron and xtradius which is not a good
+  thing. They are provided by this package in the directory
+  /usr/share/doc/libauthen-radius-perl/raddb. If you need any of these
+  dictionaries you should copy the relevant files into somewhere where
+  the code using this module can read them. By default the module will
+  look for dictionaries in the directory named /etc/raddb/dictionary.
+
+ -- Stephen Quinney <sjq@debian.org>  Sat,  9 Jul 2005 12:42:24 +0100

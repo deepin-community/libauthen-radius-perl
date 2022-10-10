@@ -1,0 +1,295 @@
+libauthen-radius-perl (0.32-1) unstable; urgency=medium
+
+  * Import upstream version 0.32.
+  * Refresh 02_remove_ppm_install_script.patch.
+  * Declare compliance with Debian Policy 4.5.0.
+  * Set Rules-Requires-Root: no.
+  * Annotate test-only build dependencies with <!nocheck>.
+  * Bump debhelper-compat to 13.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 24 Oct 2020 18:48:59 +0200
+
+libauthen-radius-perl (0.31-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Joenio Costa ]
+  * Import upstream version 0.31
+  * use uscan version 4
+  * debhelper-compat = 12
+  * declare compliance with Debian Policy 4.4.0
+  * remove 04_fix_check_pwd.patch
+  * remove 02_use_dumper.patch
+  * reorder patches
+
+  [ gregor herrmann ]
+  * Refresh 01_radius_port.patch (offset).
+  * Remove unneeded version constraint from (build) dependency.
+  * Stop tests from making DNS queries.
+
+ -- Joenio Costa <joenio@joenio.me>  Tue, 30 Jul 2019 13:30:28 -0300
+
+libauthen-radius-perl (0.29-2) unstable; urgency=medium
+
+  * Add debian/patches/04_fix_check_pwd.patch.
+    Backport from upstream's 0.31 release.
+    This fixes the check_pwd() method when dictionaries are not loaded and
+    attribute ID is used instead of Name.
+    Thanks to Ferenc Wágner for the bug report. (Closes: #930671)
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 23 Jun 2019 15:24:26 +0200
+
+libauthen-radius-perl (0.29-1) unstable; urgency=medium
+
+  * Email change: Xavier Guimard -> yadd@debian.org
+  * Import upstream version 0.29
+  * Declare compliance with policy 4.2.1
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 01 Dec 2018 20:10:53 +0100
+
+libauthen-radius-perl (0.27-1) unstable; urgency=medium
+
+  [ Damyan Ivanov ]
+  * change Priority from 'extra' to 'optional'
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ Xavier Guimard ]
+  * Import upstream version 0.27
+  * Add metadata file
+  * Update debhelper to 10
+
+  [ gregor herrmamm ]
+  * Refresh 01_radius_port.patch (offset).
+
+ -- Xavier Guimard <x.guimard@free.fr>  Mon, 09 Jul 2018 20:15:48 +0200
+
+libauthen-radius-perl (0.26-1) unstable; urgency=medium
+
+  [ gregor herrmann ]
+  * Strip trailing slash from metacpan URLs.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+  * Remove Italo Valcy from Uploaders. Thanks for your work!
+  * Remove Jonathan Yu from Uploaders. Thanks for your work!
+
+  * New upstream release.
+  * Update patches (offset + fuzz).
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 3.9.8.
+  * Bump debhelper compatibility level to 9.
+  * Add new (build) dependencies.
+  * Mark package as autopkgtest-able.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 28 Dec 2016 21:34:53 +0100
+
+libauthen-radius-perl (0.24-1) unstable; urgency=low
+
+  * Team upload.
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+  * Imported Upstream version 0.24
+  * Update copyright years for upstream files
+  * Declare compliance with Debian policy 3.9.5
+  * Refresh 01_radius_port.patch (offset)
+  * Refresh 02_use_dumper.patch patch
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 10 Jan 2014 22:54:04 +0100
+
+libauthen-radius-perl (0.22-1) unstable; urgency=low
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ Xavier Guimard ]
+  * New upstream version 0.22
+  * Bump Standards-Version to 3.9.4
+  * Use debhelper 8
+  * Update copyright (years, authors and format)
+  * Update patches
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sun, 18 Nov 2012 19:47:38 +0100
+
+libauthen-radius-perl (0.20-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+    + Improved support for CoA
+    + Adds support for dictionaries in FreeRADIUS format
+    + Partial support for WiMAX attributes
+    + Now supports multiple RADIUS servers (i.e. a cluster)
+  * Standards-Version 3.9.1 (no changes)
+  * Use new 3.0 (quilt) source format
+  * RADIUS port patch is now a documentation fix only
+  * Refresh patch to use Data::Dumper instead of HexDump
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Fri, 24 Dec 2010 00:01:15 -0500
+
+libauthen-radius-perl (0.17-1) unstable; urgency=low
+
+  * New upstream release
+  * Refresh patches
+  * Update copyright to DEP5 format
+  * No longer install README in .docs
+  * Rename README.Debian to NEWS, as it seems more appropriate
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Sun, 17 Jan 2010 12:37:52 -0500
+
+libauthen-radius-perl (0.15-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+  * Wrote a better control description
+  * Added myself to Copyright and Uploaders
+
+  [ gregor herrmann ]
+  * Refresh patches.
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Sun, 01 Nov 2009 11:22:13 -0500
+
+libauthen-radius-perl (0.14-1) unstable; urgency=low
+
+  [ gregor herrmann ]
+  * debian/control: Added: Vcs-Svn field (source stanza); Vcs-Browser
+    field (source stanza); Homepage field (source stanza). Removed: XS-
+    Vcs-Svn fields.
+  * debian/watch: use dist-based URL.
+  * Change patch system from dpatch to quilt.
+  * Refresh debian/rules, no functional changes.
+  * Add debian/README.source to document quilt usage, as required by
+    Debian Policy since 3.8.0.
+  * debian/control: Changed: Switched Vcs-Browser field to ViewSVN
+    (source stanza).
+  * debian/control: remove Replaces/Conflicts: libradius-authen-perl
+    (introduced 2001, the package is not in Debian anymore).
+
+  [ Italo Valcy ]
+  * New upstream release.
+  * debian/control: Set Standards-Version to 3.8.3; update homepage; update
+    description to make easier to find the package; update Gregor's e-mail;
+    bump debhelper and quilt build dependencies.
+  * debian/copyright: using the new copyright format; the module is now
+    released under Artistic-2.0; put the people from the changelog trailer
+    lines.
+  * debian/rules: Simplified.
+  * debian/watch: Updated using regexp example from another package.
+  * debian/patches/*: simplified headers in the patches; included patch to
+    ingnore install-radius-db.PL script.
+
+ -- Italo Valcy <italo@dcc.ufba.br>  Tue, 18 Aug 2009 08:41:54 -0300
+
+libauthen-radius-perl (0.13-1) unstable; urgency=low
+
+  * New upstream release.
+  * Set Standards-Version to 3.7.2 (no changes).
+  * Adjust patch 02_use_dumper.
+
+ -- gregor herrmann <gregor+debian@comodo.priv.at>  Fri, 13 Apr 2007 21:57:25 +0200
+
+libauthen-radius-perl (0.12-2) unstable; urgency=low
+
+  * Adopt the package for the Debian Perl Group. (Closes: #314851)
+  * Don't ignore the result of 'make distclean'.
+  * Move debhelper and dpatch to Build-Depends, as they are required
+    for the 'clean' target.
+  * Add dependency on dpatch >= 2.0.9, for /usr/share/dpatch/dpatch-run.
+  * Upgrade to debhelper compatibility level 5.
+  * Add dependency on ${misc:Depends}, as recommended by debhelper.
+  * Point debian/watch to mirrors.kernel.org/cpan instead of www.cpan.org.
+
+ -- Niko Tyni <ntyni@iki.fi>  Mon, 13 Feb 2006 21:01:30 +0200
+
+libauthen-radius-perl (0.12-1) unstable; urgency=low
+
+  * QA Group Upload
+  * New upstream release, closes: #296563, #234505.
+  * debian/control - Added build-dependency on dpatch
+  * debian/rules:
+      - Completely replaced with something more standard that works with
+        the latest upstream version.
+      - Added dpatch bits.
+  * Moved Debian changes to dpatch for easier maintenance. There are now
+    01_radius_port and 02_use_dumper to separate out the two different
+    changes that have been made previously.
+  * debian/watch - Added
+  * debian/README.Debian - Added to explain about the RADIUS dictionaries
+    now provided by upstream.
+
+ -- Stephen Quinney <sjq@debian.org>  Sat,  9 Jul 2005 12:44:24 +0100
+
+libauthen-radius-perl (0.09-2) unstable; urgency=low
+
+  * Orphaning: set maintainer to QA.
+
+ -- Ivo Timmermans <ivo@debian.org>  Mon, 20 Jun 2005 17:31:13 +0200
+
+libauthen-radius-perl (0.09-1) unstable; urgency=low
+
+  * New upstream release.
+  * Radius.pm: Use Data::Dumper instead of Data::Hexdump.
+    (Closes: #200835)
+
+ -- Ivo Timmermans <ivo@debian.org>  Sun, 28 Dec 2003 23:27:28 +0100
+
+libauthen-radius-perl (0.08-1) unstable; urgency=low
+
+  * New upstream release.
+  * Radius.pm: Change default port number to 1812 (radius).
+    (Closes: #197765)
+  * debian/control:
+      - Changed section to perl.
+      - Updated debhelper build dependency.
+
+ -- Ivo Timmermans <ivo@debian.org>  Tue, 17 Jun 2003 13:58:48 +0200
+
+libauthen-radius-perl (0.05-3) unstable; urgency=low
+
+  * Fix "Use of uninitialized value in numeric eq". (Closes: #153017)
+
+ -- Ivo Timmermans <ivo@debian.org>  Sun, 11 Aug 2002 03:14:06 +0200
+
+libauthen-radius-perl (0.05-2) unstable; urgency=low
+
+  * Applied patch from Craig Sanders to make it work with newer perl
+    packages. (Closes: 139950)
+
+ -- Ivo Timmermans <ivo@debian.org>  Sun,  7 Apr 2002 10:56:22 +0200
+
+libauthen-radius-perl (0.05-1) unstable; urgency=low
+
+  * Took over the packaging from those amateurs :-)  (Closes: #100865)
+  * Changed name to libauthen-radius-perl to satisfy common perl package
+    naming conventions.
+  * Add build dependencies.
+  * Rebuild from original upstream sources.
+  * Radius.pm uses Digest::MD5 rather than MD5.
+  * Redo of rules, starting from dh-make's template.
+  * Change the package's description.
+  * Added Replaces,Conflicts: libradius-authen-perl.
+
+ -- Ivo Timmermans <ivo@debian.org>  Fri, 15 Jun 2001 11:54:19 +0200
+
+libradius-authen-perl (1.0-1.1.1) unstable; urgency=low
+
+  * Built on potato.
+
+ -- J.H.M. Dassen (Ray) <jdassen@cistron.nl>  Thu, 15 Feb 2001 18:53:59 +0100
+
+libradius-authen-perl (1.0-1.1) unstable; urgency=low
+
+  * Include "build" rule so "debuild" etc. work.
+
+ -- J.H.M. Dassen (Ray) <jdassen@cistron.nl>  Thu, 15 Feb 2001 18:53:03 +0100
+
+libradius-authen-perl (1.0-1) unstable; urgency=low
+
+  * Initial packaging
+
+ -- Pieter Jansen <pj@cistron.nl>  Thu, 22 Jun 2000 13:30:18 +0200

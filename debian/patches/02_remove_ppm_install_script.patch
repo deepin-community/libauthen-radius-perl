@@ -1,0 +1,20 @@
+Description: Remove PPM_INSTALL_SCRIPT from Makefile
+ PPM_INSTALL_SCRIPT installs a set of radius dictionaries into standard
+ location. This would conflict with radius-cistron and xtradius packages
+ (see README.Debian).
+Forwarded: not-needed
+Author: Italo Valcy <italo@dcc.ufba.br>
+Reviewed-by: gregor herrmann <gregoa@debian.org>
+Last-Update: 2020-10-24
+
+--- a/Makefile.PL
++++ b/Makefile.PL
+@@ -4,7 +4,7 @@
+ WriteMakefile(
+     NAME => 'Authen::Radius',
+     VERSION_FROM => 'Radius.pm', # finds $VERSION
+-    PPM_INSTALL_SCRIPT => 'install-radius-db.PL',
++    PL_FILES => {},
+     MIN_PERL_VERSION => "v5.10.0",
+     BUILD_REQUIRES => {
+         # Support for TEST_REQUIRES

@@ -1,0 +1,19 @@
+Description: Change de standard radius port
+ The standard radius port on Debian is 1812 rather than 1645 which is 
+ now "old-radius".
+ .
+ This patch is now a simple documentation fix (the default upstream
+ has now been changed to 1645).
+Last-Update: 2019-07-30
+
+--- a/Radius.pm
++++ b/Radius.pm
+@@ -1301,7 +1301,7 @@
+ The default C<Service> is C<radius>, the alternative is C<radius-acct>.
+ If you do not specify port in the C<Host> as a C<hostname:port>, then port
+ specified in your F</etc/services> will be used. If there is nothing
+-there, and you did not specify port either then default is 1645 for
++there, and you did not specify port either then default is 1812 for
+ C<radius> and 1813 for C<radius-acct>.
+ 
+ Optional parameter C<Debug> with a Perl "true" value turns on debugging
